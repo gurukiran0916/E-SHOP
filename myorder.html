@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get your products</title>
+    <link rel="stylesheet" type="text/css" href="Resources/CSS/style1.css" >    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+<style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+    html {
+  box-sizing: border-box;
+}  
+    .btn{
+        top: 40px;
+        height: 30px;
+        width: 80px;
+        color: black;
+        margin-left: 30px;
+        font-size: 18px;
+        text-decoration: none;
+         border: 2px solid transparent;
+        border-radius: 10px;
+        background-color: aqua;
+        background-origin: border-box;
+        background-clip:border-box;
+    }
+    </style>    
+    
+<body>
+    <a href="productdetails.html" class="btn">BACK</a>
+    
+    <div class="card" >
+      
+      <div class="container">
+        
+        <p id="title"></p>
+          
+        <img id='img' height="200" width="350">
+          
+        <h3 id="price"></h3>
+          
+        <p id='discount'></p>
+     
+      </div>
+    </div>
+    
+</body>
+    <script>
+        const url=new URL(window.location.href)
+        const temp=['title','img','price','discount']
+        for(let i=0;i<4;i++){
+            const data=url.searchParams.get(temp[i])
+            const element=document.getElementById(temp[i])
+            if(temp[i]==='img')element.src=data
+            else element.innerHTML=data
+      
+        }
+        
+        
+    </script>
+</html>

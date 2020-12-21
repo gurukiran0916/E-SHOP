@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 30%;
+  padding: 8px;
+  
+  
+  
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+    
+</style>
+</head>
+<body>
+<div class="signin"><a href="SalesIndia.html">
+    <font  color="Black" size="6">Back to home</font>
+    </a></div> 
+<h3>Add product</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="name">UserName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+    <label for="product">Product Name :</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your productname.."><br>
+
+    <label for="q">Quantity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+    <input type="text" id="lname" name="lastname" placeholder="Enter the quantity"><br>
+
+    <label for="descriptions">Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+    <input type="text" id="lname" name="lastname" placeholder="Description about product" ><br>
+
+    <label for="file">Images :</label><br><br>
+    
+   
+
+    <input type='file' onchange="readURL(this);" />
+    <img id="blah" src="#" alt="your image" />  
+
+    <script type="text/javascript">
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {  
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("patient_pic").live("change",function(){
+readURL(this,"#preview_image")
+});
+    </script><br><br>
+    <input type="submit" value="Add Product">
+  </form>
+</div>
+
+</body>
+</html>

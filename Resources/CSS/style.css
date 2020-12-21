@@ -1,0 +1,259 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.header{
+    background-color: orange;
+    height: 150px;
+}
+.main{
+    display: inline-flex;
+    width: 80%;
+    height: 40%;
+    margin:0px 60px;
+    margin-top: 40px;
+    float:left;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.5px ease;
+}
+
+.signin-btn{
+    top: 40px;
+    height: 30px;
+    width: 80px;
+    right: 25px;
+    position: absolute;
+    text-decoration: none;
+    color:aliceblue;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#FF400d33,#ffffff),radial-gradient(circle at top left,#fd00da,#19d7f8);
+    background-origin: border-box;
+    background-clip:border-box;
+
+}
+.signin-btn:hover{
+    background-color:#fff;
+    color:aliceblue;
+    padding: 6px 20px;
+}
+.logo img{
+    width: 80px;
+    height: 60px;
+    margin-top: 0px;
+    margin-right: 70px;
+    border-radius: 50px;
+}
+.tablink {
+  background-color:antiquewhite;
+  color: black;
+  float: right;
+  border:0px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 4px;
+  font-size: 17px;
+  width: 20%;
+  text-decoration: none;
+  text-align: center;
+}
+.tablink:hover {
+  background-color: orangered;
+}
+
+.tabcontent{
+    color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.bg{
+    width: 100%;
+    height:700px;
+}
+
+
+/*--------start of silding----------*/
+.slider-frame{
+    height: 550px;
+    width: 550px;
+    margin-left: 30px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 1200px;}
+    30% {left: 1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100%{left: 0px;}
+}
+.slider-images{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 -2400px;
+    -webkit-animation-name:slide_animation;
+    -webkit-animation-duration:30s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;  
+}
+.img-container{
+    height: 100px;
+    width: 120px;
+    position: relative;
+    float: left;
+    
+    
+}
+ /*-------end of animation part-----------*/
+
+
+
+/*......search box......*/
+body{
+    background: #fff;
+}
+
+.main1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.main1 input[type=text]{
+    float:right;
+    padding: 8px 6px ;
+    border: 5px solid #FF4000;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+   .main1 input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .main1 input[type=text] {
+    border: transparent;
+  }
+}
+/* ...end odf search box...*/
+
+
+
+
+/*..........login form.......*/
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background: url("IMG/background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position:relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-box{
+    width: 230px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 28px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background:linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group{
+    top:180px
+    position:absolute;
+    width: 280px;
+    transition: .5px;
+}
+.input-field{
+    width:100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0px;
+    border-top: 0;
+    border-right: 0px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.submit-btn{
+    width: 75%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin:30px 10px 30px 0px;
+    
+}
+.span{
+    color: gray;;
+    font-size: 12px;
+    bottom: 110px;
+    position: absolute;
+}
+
+#login{
+    margin-left: 50px;
+}
+#register{
+    margin-left: 60px;
+}
+
+/*........end of login form.........*/
